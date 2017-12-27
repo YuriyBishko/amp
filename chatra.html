@@ -1,17 +1,7 @@
 <!-- Chatra {literal} -->
 <script>
-function getQueryVariable(variable) {
-	var query = window.location.search.substring(1);
-	var vars = query.split("&");
-	for (var i=0;i<vars.length;i++) {
-		var pair = vars[i].split("=");
-		if(pair[0] == variable){return pair[1];}
-	}
-	return(false);
-}
-var chatid = getQueryVariable("id");
     (function(d, w, c) {
-        w.ChatraID = chatid;
+        w.ChatraID = 's6LGLrTd4kjo5yRyr';
         var s = d.createElement('script');
         w[c] = w[c] || function() {
             (w[c].q = w[c].q || []).push(arguments);
@@ -22,24 +12,22 @@ var chatid = getQueryVariable("id");
         if (d.head) d.head.appendChild(s);
     })(document, window, 'Chatra');
 </script>
-
 <!-- /Chatra {/literal} -->
 
 <!-- amp-iframe resize -->
 <script>
 (function (d, w) {
-  var BORDER_WIDTH = 2;
   var sizes = [101, 480];
   var currentSize = 0;
   postSize(sizes[currentSize]);
   console.log(d,w);
-		console.log(d.getElementsByClassName('header'));
-// 	  d.getElementById('chatra').onclick = function(event) {
-// 	    postSize(sizes[currentSize]);
-// 	  }
+  d.getElementById('chatra').onclick = function(event) {
+    postSize(sizes[currentSize]);
+  }
 	
   function postSize(size) {
     console.log('post new embed-size: ' + size);
+    currentSize = (currentSize + 1) % sizes.length;
     w.parent.postMessage({
       sentinel: 'amp',
       type: 'embed-size',
