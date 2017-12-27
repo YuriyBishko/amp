@@ -1,4 +1,3 @@
-<div id="box">
 <!-- Chatra {literal} -->
 <script>
 function getQueryVariable(variable) {
@@ -33,8 +32,9 @@ var chatid = getQueryVariable("id");
   var sizes = [101, 480];
   var currentSize = 0;
   postSize(sizes[currentSize]);
-  console.log('d->',d);
+  console.log(d,w);
   	if (d.getElementById('chatra')){
+		console.log('chatre present');
 	  d.getElementById('chatra').onclick = function(event) {
 	    postSize(sizes[currentSize]);
 	  }
@@ -51,5 +51,4 @@ var chatid = getQueryVariable("id");
   }
 })(document, window);
 </script>
-</div>
   
