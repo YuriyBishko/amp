@@ -33,12 +33,11 @@ var chatid = getQueryVariable("id");
   var currentSize = 0;
   postSize(sizes[currentSize]);
   console.log(d,w);
-  	if (d.getElementById('chatra')){
-		console.log('chatre present');
-	  d.getElementById('chatra').onclick = function(event) {
-	    postSize(sizes[currentSize]);
-	  }
-	}
+		console.log(d.getElementsByClassName('header'));
+// 	  d.getElementById('chatra').onclick = function(event) {
+// 	    postSize(sizes[currentSize]);
+// 	  }
+	
   function postSize(size) {
     console.log('post new embed-size: ' + size);
     w.parent.postMessage({
