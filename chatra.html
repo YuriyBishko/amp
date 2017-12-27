@@ -24,26 +24,21 @@ var chatid = getQueryVariable("id");
 </script>
 
 <!-- /Chatra {/literal} -->
-<div id="box"> BOXDIV</div>
+
 <!-- amp-iframe resize -->
 <script>
 (function (d, w) {
   var BORDER_WIDTH = 2;
-  var sizes = [60, 480];
+  var sizes = [101, 480];
   var currentSize = 0;
   postSize(sizes[currentSize]);
-
+  console.log('d->',d);
   d.getElementById('main').onclick = function(event) {
     postSize(sizes[currentSize]);
   }
 
   function postSize(size) {
-    console.log('post new embed-size: ' + size + 'x' + size);
-    var box = d.getElementById('box');
-    box.style.width = '340px';
-    box.style.height = size + 'px';
-    currentSize = (currentSize + 1) % sizes.length;
-
+    console.log('post new embed-size: ' + size);
     w.parent.postMessage({
       sentinel: 'amp',
       type: 'embed-size',
