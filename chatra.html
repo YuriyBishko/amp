@@ -13,11 +13,22 @@
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
-<div id="box">BOX</div>
+<style>
+#box{
+    position: absolute;
+    top: 0;
+    z-index: 999999999999999999;
+    background: red;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+</style>
+<div id="box"></div>
 <!-- amp-iframe resize -->
 <script>
 (function (d, w) {
-  var sizes = [101, 480];
+  var sizes = [101, 456];
   var currentSize = 0;
   postSize(sizes[currentSize]);
   console.log(d,w);
@@ -32,7 +43,7 @@
       sentinel: 'amp',
       type: 'embed-size',
       height: size,
-      width: '340'
+      width: '320'
     }, '*');
 
   }
