@@ -13,7 +13,7 @@
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
-
+<div id="box">BOX</div>
 <!-- amp-iframe resize -->
 <script>
 (function (d, w) {
@@ -21,7 +21,7 @@
   var currentSize = 0;
   postSize(sizes[currentSize]);
   console.log(d,w);
-  d.getElementById('chatra').onclick = function(event) {
+  d.getElementById('box').onclick = function(event) {
     postSize(sizes[currentSize]);
   }
 	
