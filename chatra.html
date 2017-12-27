@@ -39,7 +39,6 @@ var chatid = getQueryVariable("id");
 
   function postSize(size) {
     console.log('post new embed-size: ' + size + 'x' + size);
-    d.getElementById('size').innerHTML = size + 'x' + size;
     var box = d.getElementById('box');
     box.style.width = size - BORDER_WIDTH + 'px';
     box.style.height = size - BORDER_WIDTH + 'px';
