@@ -29,7 +29,7 @@ var chatid = getQueryVariable("id");
 <script>
 (function (d, w) {
   var BORDER_WIDTH = 2;
-  var sizes = [200, 300];
+  var sizes = [60, 480];
   var currentSize = 0;
   postSize(sizes[currentSize]);
 
@@ -40,15 +40,15 @@ var chatid = getQueryVariable("id");
   function postSize(size) {
     console.log('post new embed-size: ' + size + 'x' + size);
     var box = d.getElementById('box');
-    box.style.width = size - BORDER_WIDTH + 'px';
-    box.style.height = size - BORDER_WIDTH + 'px';
+    box.style.width = '340px';
+    box.style.height = size + 'px';
     currentSize = (currentSize + 1) % sizes.length;
 
     w.parent.postMessage({
       sentinel: 'amp',
       type: 'embed-size',
       height: size,
-      width: size
+      width: '340'
     }, '*');
 
   }
