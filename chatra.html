@@ -24,7 +24,7 @@ var chatid = getQueryVariable("id");
 </script>
 
 <!-- /Chatra {/literal} -->
-
+<div id="box"> BOXDIV</div>
 <!-- amp-iframe resize -->
 <script>
 (function (d, w) {
@@ -33,7 +33,7 @@ var chatid = getQueryVariable("id");
   var currentSize = 0;
   postSize(sizes[currentSize]);
 
-  d.getElementById('action').onclick = function(event) {
+  d.getElementById('main').onclick = function(event) {
     postSize(sizes[currentSize]);
   }
 
