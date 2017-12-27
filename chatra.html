@@ -10,15 +10,12 @@
         s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
         + '//call.chatra.io/chatra.js';
         if (d.head) d.head.appendChild(s);
-	    console.log(d,s);
     })(document, window, 'Chatra');
 </script>
 <script>
-window.ChatraSetup = {
-    chatWidth: 400,
-    chatHeight: 550,
-    startHidden: false
-};
+document.getElementById('chatra').onclick = function(event) {
+	  console.log(Chatra());
+}
 </script>
 <!-- /Chatra {/literal} -->
 <style>
